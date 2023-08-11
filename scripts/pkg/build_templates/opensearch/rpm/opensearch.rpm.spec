@@ -131,6 +131,8 @@ echo " sudo systemctl start opensearch.service"
 if [ -d %{product_dir}/plugins/opensearch-security ]; then
     echo "### Create opensearch demo certificates in %{config_dir}/"
     echo " See demo certs creation log in %{log_dir}/install_demo_configuration.log"
+    chmod -c 0750 ${config_dir}/config/opensearch-security
+    chmod -c 0640 ${config_dir}/config/opensearch-security/*.yml
 fi
 exit 0
 
