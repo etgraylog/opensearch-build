@@ -42,6 +42,6 @@ ln -s ${log_dir}  ${buildroot}${product_dir}/logs
 
 # Change Permissions
 chmod -Rf a+rX,u+w,g-w,o-w ${buildroot}/*
-chmod -c 0640 ${config_dir}/config/*.yml
+chmod -c 0640 ${config_dir}/config/opensearch.yml
 
 exit 0
