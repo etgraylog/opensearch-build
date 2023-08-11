@@ -44,10 +44,6 @@ chown -R opensearch.opensearch ${log_dir}
 chown -R opensearch.opensearch ${data_dir}
 chown -R opensearch.opensearch ${pid_dir}
 
-# Set Permissions
-chmod -c 0750 ${config_dir}/config/opensearch-security
-chmod -c 0640 ${config_dir}/config/opensearch-security/*.yml
-
 # Reload systemctl daemon
 if command -v systemctl > /dev/null; then
     systemctl daemon-reload
