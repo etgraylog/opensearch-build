@@ -69,6 +69,7 @@ if [ ! -f %{buildroot}%{data_dir}/performance_analyzer_enabled.conf ]; then
 fi
 # Change Permissions
 chmod -Rf a+rX,u+w,g-w,o-w %{buildroot}/*
+chmod 0640 ${config_dir}/config/opensearch.yml
 exit 0
 
 %pre
